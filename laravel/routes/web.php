@@ -12,5 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::group(['middleware' => 'visitors'], function () {
+    Route::get('/register','RegistrationController@register');
+    Route::post('/register', 'RegistrationController@postRegister');
+
+    Route::get('/login','LoginController@login');
+    Route::post('/login','LoginController@postLogin');
+
+    Route::get('/','VisitorsController@home');
+});
+
+Route::post('/logout','LoginController@logout');
+
+Route::get('/ahome','AdminController@ahome')->middleware('admin');
+Route::get('/mhome','ModeratorController@mhome')->middleware('moderator');
+Route::get('/uhome','UserController@uhome')->middleware('user');
