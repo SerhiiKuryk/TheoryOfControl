@@ -51,35 +51,63 @@ class MigrationCartalystSentinel extends Migration
             $table->unique('code');
         });
 
-        Schema::create('reminders', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
-            $table->string('code');
-            $table->boolean('completed')->default(0);
-            $table->timestamp('completed_at')->nullable();
-            $table->timestamps();
+            $table->string('category');
 
             $table->engine = 'InnoDB';
         });
 
-        Schema::create('roles', function (Blueprint $table) {
+        Schema::create('texts', function (Blueprint $table) {
+            $table->increments('id_text');
+            $table->text('text');
+
+            $table->engine = 'InnoDB';
+        });
+
+        Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('slug');
-            $table->string('name');
-            $table->text('permissions')->nullable();
+            $table->string('email');
+            $table->string('password');
+            $table->timestamp('last_login')->nullable();
+            $table->string('user_name');
+            $table->boolean('access')->default(1);
             $table->timestamps();
 
             $table->engine = 'InnoDB';
-            $table->unique('slug');
+            $table->unique('email');
         });
 
-        Schema::create('role_users', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
+            $table->increments('id_art');
+            $table->integer('category_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->integer('role_id')->unsigned();
-            $table->nullableTimestamps();
+            $table->string('title');
+            $table->integer('id_text')->unsigned();
+            $table->integer('visit_count')->default(0);
+            $table->integer('like_count')->default(0);
+            $table->boolean('access')->default(1);
+            $table->timestamp('publication_date')->nullable();
+            $table->timestamps();
+
+            $table->unique('id_text');
+            $table->unique('user_id');
+            $table->unique('category_id');
+
+
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onUpdate('cascade');
+
+            $table->foreign('category_id')
+                ->references('id')->on('categories')
+                ->onUpdate('cascade');
+
+            $table->foreign('id_text')
+                ->references('id_text')->on('texts')
+                ->onUpdate('cascade');
 
             $table->engine = 'InnoDB';
-            $table->primary(['user_id', 'role_id']);
         });
 
         Schema::create('throttle', function (Blueprint $table) {
@@ -93,19 +121,72 @@ class MigrationCartalystSentinel extends Migration
             $table->index('user_id');
         });
 
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('reminders', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email');
-            $table->string('password');
-            $table->text('permissions')->nullable();
-            $table->timestamp('last_login')->nullable();
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
+            $table->integer('user_id')->unsigned();
+            $table->string('code');
+            $table->boolean('completed')->default(0);
+            $table->timestamp('completed_at')->nullable();
             $table->timestamps();
 
             $table->engine = 'InnoDB';
-            $table->unique('email');
         });
+
+
+        Schema::create('roles', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('slug');
+            $table->string('name');
+
+            $table->engine = 'InnoDB';
+            $table->unique('slug');
+        });
+
+        Schema::create('role_users', function (Blueprint $table) {
+            $table->integer('user_id')->unsigned();
+            $table->integer('role_id')->unsigned();
+            $table->nullableTimestamps();
+
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onUpdate('cascade');
+
+            $table->foreign('role_id')
+                ->references('id')->on('roles')
+                ->onUpdate('cascade');
+
+            $table->engine = 'InnoDB';
+            $table->primary(['user_id', 'role_id']);
+        });
+
+
+        Schema::create('rights', function (Blueprint $table) {
+            $table->increments('id_right');
+            $table->string('name_right', 300);
+
+            $table->engine = 'InnoDB';
+        });
+
+
+        Schema::create('rights_role', function (Blueprint $table) {
+            $table->increments('id_right_role');
+            $table->integer('id_right')->unsigned();
+            $table->integer('id_role')->unsigned();
+
+
+            $table->foreign('id_right')
+                ->references('id_right')->on('rights')
+                ->onUpdate('cascade');
+
+            $table->foreign('id_role')
+                ->references('role_id')->on('role_users')
+                ->onUpdate('cascade');
+
+            $table->unique('id_right');
+            $table->unique('id_role');
+            $table->engine = 'InnoDB';
+        });
+
     }
 
     /**
@@ -115,12 +196,10 @@ class MigrationCartalystSentinel extends Migration
      */
     public function down()
     {
-        Schema::drop('activations');
-        Schema::drop('persistences');
-        Schema::drop('reminders');
+        Schema::drop('articles');
+        Schema::drop('texts');
         Schema::drop('roles');
         Schema::drop('role_users');
-        Schema::drop('throttle');
         Schema::drop('users');
     }
 }

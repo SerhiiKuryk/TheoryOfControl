@@ -17,7 +17,7 @@
                             <div class="input-group">
                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
 
-                                <input type="email" name="email" class="form-control" placeholder="example@example.com">
+                                <input type="email" name="email" class="form-control" placeholder="example@example.com" required>
                             </div>
                         </div>
 
@@ -26,16 +26,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
 
-                                <input type="text" name="first_name" class="form-control" placeholder="First Name">
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-
-                                <input type="text" name="last_name" class="form-control" placeholder="Last Name">
+                                <input type="text" name="user_name" class="form-control" placeholder="User Name" required>
                             </div>
                         </div>
 
@@ -43,7 +34,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
 
-                                <input type="password" name="password" class="form-control" placeholder="Password">
+                                <input type="password" name="password" class="form-control" placeholder="Password" required>
                             </div>
                         </div>
 
@@ -51,7 +42,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
 
-                                <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation">
+                                <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation" required>
                             </div>
                         </div>
 
