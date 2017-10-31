@@ -58,13 +58,6 @@ class MigrationCartalystSentinel extends Migration
             $table->engine = 'InnoDB';
         });
 
-        Schema::create('texts', function (Blueprint $table) {
-            $table->increments('id_text');
-            $table->text('text');
-
-            $table->engine = 'InnoDB';
-        });
-
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email');
@@ -79,18 +72,18 @@ class MigrationCartalystSentinel extends Migration
         });
 
         Schema::create('articles', function (Blueprint $table) {
-            $table->increments('id_art');
+            $table->increments('id');
             $table->integer('category_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->string('title');
-            $table->integer('id_text')->unsigned();
+            $table->text('text');
+            $table->string('image');
             $table->integer('visit_count')->default(0);
             $table->integer('like_count')->default(0);
             $table->boolean('access')->default(1);
             $table->timestamp('publication_date')->nullable();
             $table->timestamps();
 
-            $table->unique('id_text');
             $table->unique('user_id');
             $table->unique('category_id');
 
@@ -103,9 +96,6 @@ class MigrationCartalystSentinel extends Migration
                 ->references('id')->on('categories')
                 ->onUpdate('cascade');
 
-            $table->foreign('id_text')
-                ->references('id_text')->on('texts')
-                ->onUpdate('cascade');
 
             $table->engine = 'InnoDB';
         });
@@ -161,29 +151,29 @@ class MigrationCartalystSentinel extends Migration
 
 
         Schema::create('rights', function (Blueprint $table) {
-            $table->increments('id_right');
-            $table->string('name_right', 300);
+            $table->increments('right_id');
+            $table->string('right_name', 300);
 
             $table->engine = 'InnoDB';
         });
 
 
         Schema::create('rights_role', function (Blueprint $table) {
-            $table->increments('id_right_role');
-            $table->integer('id_right')->unsigned();
-            $table->integer('id_role')->unsigned();
+            $table->increments('id');
+            $table->integer('right_id')->unsigned();
+            $table->integer('role_id')->unsigned();
 
 
-            $table->foreign('id_right')
-                ->references('id_right')->on('rights')
+            $table->foreign('right_id')
+                ->references('right_id')->on('rights')
                 ->onUpdate('cascade');
 
-            $table->foreign('id_role')
+            $table->foreign('role_id')
                 ->references('role_id')->on('role_users')
                 ->onUpdate('cascade');
 
-            $table->unique('id_right');
-            $table->unique('id_role');
+            $table->unique('right_id');
+            $table->unique('role_id');
             $table->engine = 'InnoDB';
         });
 
