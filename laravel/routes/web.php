@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+
 Route::group(['middleware' => 'visitors'], function () {
     Route::get('/register','RegistrationController@register');
     Route::post('/register', 'RegistrationController@postRegister');
@@ -30,6 +31,9 @@ Route::post('/logout','LoginController@logout');
 Route::get('/ahome','AdminController@ahome')->middleware('admin');
 Route::get('/mhome','ModeratorController@mhome')->middleware('moderator');
 Route::get('/uhome','UserController@uhome')->middleware('user');
-
 Route::get('/create','PostsController@create');
 Route::resource('posts', 'PostsController');
+Route::get('/food','CategoriesController@food');
+Route::get('/fun','CategoriesController@fun');
+Route::get('/science','CategoriesController@science');
+Route::get('/sport', 'CategoriesController@sport');
