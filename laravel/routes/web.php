@@ -31,6 +31,8 @@ Route::post('/logout','LoginController@logout');
 Route::get('/ahome','AdminController@ahome')->middleware('admin');
 Route::get('/mhome','ModeratorController@mhome')->middleware('moderator');
 Route::get('/uhome','UserController@uhome')->middleware('user');
+Route::get('/create','PostsController@create');
+Route::resource('posts', 'PostsController');
 Route::get('/food','CategoriesController@food');
 Route::get('/fun','CategoriesController@fun');
 Route::get('/science','CategoriesController@science');
