@@ -150,32 +150,6 @@ class MigrationCartalystSentinel extends Migration
         });
 
 
-        Schema::create('rights', function (Blueprint $table) {
-            $table->increments('right_id');
-            $table->string('right_name', 300);
-
-            $table->engine = 'InnoDB';
-        });
-
-
-        Schema::create('rights_role', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('right_id')->unsigned();
-            $table->integer('role_id')->unsigned();
-
-
-            $table->foreign('right_id')
-                ->references('right_id')->on('rights')
-                ->onUpdate('cascade');
-
-            $table->foreign('role_id')
-                ->references('role_id')->on('role_users')
-                ->onUpdate('cascade');
-
-            $table->unique('right_id');
-            $table->unique('role_id');
-            $table->engine = 'InnoDB';
-        });
 
     }
 
