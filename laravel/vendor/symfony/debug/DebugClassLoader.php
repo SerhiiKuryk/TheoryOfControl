@@ -34,6 +34,11 @@ class DebugClassLoader
     private static $php7Reserved = array('int', 'float', 'bool', 'string', 'true', 'false', 'null');
     private static $darwinCache = array('/' => array('/', array()));
 
+    /**
+     * Constructor.
+     *
+     * @param callable $classLoader A class loader
+     */
     public function __construct(callable $classLoader)
     {
         $this->classLoader = $classLoader;
@@ -204,11 +209,18 @@ class DebugClassLoader
                 self::$deprecated[$name] = preg_replace('#\s*\r?\n \* +#', ' ', $notice[1]);
             } else {
                 // Don't trigger deprecations for classes in the same vendor
-                if (2 > $len = 1 + (strpos($name, '\\') ?: strpos($name, '_'))) {
+                if (2 > $len = 1 + (strpos($name, '\\', 1 + strpos($name, '\\')) ?: strpos($name, '_'))) {
                     $len = 0;
                     $ns = '';
                 } else {
-                    $ns = substr($name, 0, $len);
+                    switch ($ns = substr($name, 0, $len)) {
+                        case 'Symfony\Bridge\\':
+                        case 'Symfony\Bundle\\':
+                        case 'Symfony\Component\\':
+                            $ns = 'Symfony\\';
+                            $len = strlen($ns);
+                            break;
+                    }
                 }
 
                 if (!$parent || strncmp($ns, $parent, $len)) {

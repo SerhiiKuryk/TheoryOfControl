@@ -12,6 +12,8 @@
 namespace Symfony\Component\HttpFoundation\Session\Storage\Handler;
 
 /**
+ * MemcachedSessionHandler.
+ *
  * Memcached based session storage handler based on the Memcached class
  * provided by the PHP memcached extension.
  *
@@ -21,6 +23,9 @@ namespace Symfony\Component\HttpFoundation\Session\Storage\Handler;
  */
 class MemcachedSessionHandler implements \SessionHandlerInterface
 {
+    /**
+     * @var \Memcached Memcached driver
+     */
     private $memcached;
 
     /**
@@ -34,6 +39,8 @@ class MemcachedSessionHandler implements \SessionHandlerInterface
     private $prefix;
 
     /**
+     * Constructor.
+     *
      * List of available options:
      *  * prefix: The prefix to use for the memcached keys in order to avoid collision
      *  * expiretime: The time to live in seconds
@@ -96,7 +103,7 @@ class MemcachedSessionHandler implements \SessionHandlerInterface
     {
         $result = $this->memcached->delete($this->prefix.$sessionId);
 
-        return $result || \Memcached::RES_NOTFOUND == $this->memcached->getResultCode();
+        return $result || $this->memcached->getResultCode() == \Memcached::RES_NOTFOUND;
     }
 
     /**
