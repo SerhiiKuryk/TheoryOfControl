@@ -71,7 +71,7 @@ class MigrationCartalystSentinel extends Migration
             $table->unique('email');
         });
 
-        Schema::create('articles', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('category_id')->unsigned();
             $table->integer('user_id')->unsigned();
