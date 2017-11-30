@@ -5132,3 +5132,6 @@ Stack trace:
 #25 C:\openserver\domains\laravel\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #26 C:\openserver\domains\laravel\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #27 {main}  
+[2017-11-29 17:34:00] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function users() on null' in C:\openserver\domains\laravel\app\Http\Controllers\RegistrationController.php:19
+Stack trace:
+#0 {main}  

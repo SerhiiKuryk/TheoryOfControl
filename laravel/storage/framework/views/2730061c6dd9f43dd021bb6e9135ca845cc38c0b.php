@@ -9,10 +9,10 @@
 
 
         <!-- Bootstrap core CSS -->
-        <link href="http://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+       <!-- <link href="http://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <link href="http://getbootstrap.com/docs/3.3/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+       <!-- <link href="http://getbootstrap.com/docs/3.3/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
         <!-- Custom styles for this template -->
         <link href="http://getbootstrap.com/docs/3.3/examples/blog/blog.css" rel="stylesheet">
@@ -30,7 +30,7 @@
 
 
         <!Sluder-->
-        <link href="http://getbootstrap.com/docs/3.3/examples/theme/theme.css" rel="stylesheet">
+   <!--     <link href="http://getbootstrap.com/docs/3.3/examples/theme/theme.css" rel="stylesheet"> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
         <script src="http://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"> </script>
     </head>
@@ -45,7 +45,7 @@
                 <a class="blog-nav-item" href="/style">Стиль</a>
                 <a class="blog-nav-item" href="/fun">Розваги</a>
                 <a class="blog-nav-item" href="/sport">Спорт</a>
-                <a class="blog-nav-item" href="/sience">Наука</a>
+                <a class="blog-nav-item" href="/science">Наука</a>
             </nav>
         </div>
     </div>

@@ -19,4 +19,7 @@ class CategoriesController extends Controller
     public function sport(){
         return view('categories.sport');
     }
+    public function style(){
+        return view('categories.style');
+    }
 }
