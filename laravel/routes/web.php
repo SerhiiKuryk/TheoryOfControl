@@ -37,3 +37,11 @@ Route::get('/fun','CategoriesController@fun');
 Route::get('/science','CategoriesController@science');
 Route::get('/sport', 'CategoriesController@sport');
 Route::get('/style', 'CategoriesController@style');
+
+Route::get('/create', function () {
+    return view('posts.create');
+});
+
+Route::get('/manage', function () {
+    return view('posts.manage');
+});

@@ -1,68 +1,118 @@
 <div >
-    <nav>
-
-        <div class="row">
 
 
-            <?php
-            if(Sentinel::check()==false)
-                echo ('<div class="navbar-header col-xs-3" style="font-size: 20pt;"><a href="/">HandyBlog</a></div>');
-            else
+    <!--<div class="navbar navbar-inverse">-->
+    <div class="navbar navbar-primary">
+        <div class="container-fluid">
+
+            @if(Auth::check()==false)
+            <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 20pt;">HandyBlog</a>
+
+            <ul class="nav navbar-nav navbar">
+
+            @else
             {
-                $slug = Sentinel::getUser()->roles()->first()->slug;
 
-                if($slug == 'admin')
-                    echo ('<div class="navbar-header"><a href="/ahome">HandyBlog</a></div>');
-                elseif ($slug == 'moderator')
-                    echo ('<div class="navbar-header"><a href="/mhome">HandyBlog</a></div>');
-                elseif ($slug == 'user')
-                    echo ('<div class="navbar-header"><a href="/uhome">HandyBlog</a></div>');
+                @if(Sentinel::getUser()->roles()->first()->slug == 'admin')
+                        <a class="navbar-brand" href="{{ url('/ahome') }}">HandyBlog</a>
+
+                        <ul class="nav navbar-nav">
+
+                @elseif (Sentinel::getUser()->roles()->first()->slug == 'moderator')
+                                <a class="navbar-brand" href="{{ url('/') }}">HandyBlog</a>
+
+                                <ul class="nav navbar-nav">
+
+                @elseif (Sentinel::getUser()->roles()->first()->slug == 'user')
+                                        <a class="navbar-brand" href="{{ url('/') }}">HandyBlog</a>
+
+                                        <ul class="nav navbar-nav">
+
+                @endif
             }
-            ?>
+            @endif
 
 
-            <div class="col-xs-6" >
-                <div class="input-group">
-                    <div class="input-group-btn search-panel">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            <span id="search_concept">Name</span> <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#author"><i class="fa fa-angle-double-right"></i>Author</a></li>
-                            <li><a href="#title"><i class="fa fa-angle-double-right"></i>Title</a></li>
+                <li><a href="{{ url('/create') }}" class="btn btn-success">Створити статтю</a></li>
+                                            @if(Sentinel::check())
+                    <li><a href="{{ url('/manage') }}" class="btn btn-warning">Мої статті</a></li>
+                        @endif
+                <li>
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
 
-                        </ul>
-                    </div>
-                    <input type="hidden" name="search_param" value="name" id="search_param">
-                    <input type="text" class="form-control" name="q" placeholder="Search.." id="search_key" value="">
-                    <span class="input-group-btn">
-			<a class="btn btn-default text-muted" href="http://adminlte.dev/user/item" title="Clear"><i class="glyphicon glyphicon-remove"></i> </a>
-			<button class="btn btn-info" type="submit">  Search  </button>
-	    </span>
-                </div>
-            </div>
+                            <div class="input-group-btn search-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span id="search_concept">Filter by</span> <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#contains">Contains</a></li>
+                                    <li><a href="#its_equal">It's equal</a></li>
+                                    <li><a href="#greather_than">Greather than ></a></li>
+                                    <li><a href="#less_than">Less than < </a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#all">Anything</a></li>
+                                </ul>
+                            </div>
+
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+							<button type="reset" class="btn btn-default">
+								<span class="glyphicon glyphicon-remove">
+									<span class="sr-only">Close</span>
+								</span>
+							</button>
+							<button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search">
+									<span class="sr-only">Search</span>
+								</span>
+							</button>
+						</span>
+                        </div>
+                    </form>
 
 
-            <ul class="nav nav-pills pull-right col-xs-2 col-md-offset-1">
+
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
                 @if(Sentinel::check())
-                    <li role="presentation">
+                    <li >
                         <form action="/logout" method="POST" id="logout-form">
                             {{ csrf_field() }}
-
-                            <a href="#" onClick="document.getElementById('logout-form').submit()">Logout</a>
+                            <ul class="nav navbar-nav navbar-right" >
+                            <li style="margin-right: 20px;"><a href="#" onClick="document.getElementById('logout-form').submit()">Logout</a>
+                            </li>
+                            </ul>
                         </form>
                     </li>
                 @else
-                    <li role="presentation"><a href="/login">Sign in</a></li>
-                    <li role="presentation"><a href="/register">Sign up</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Login</a></li>
                 @endif
             </ul>
-
-
+                                </ul>
         </div>
-
-
-    </nav>
-
-
+    </div>
+    <ul class="nav nav-pills nav-justified navbar-default">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Всі категорії</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/food">Їжа</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/style">Стиль</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/fun">Розваги</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/sport">Спорт</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/science">Наука</a>
+        </li>
+    </ul>
 </div>

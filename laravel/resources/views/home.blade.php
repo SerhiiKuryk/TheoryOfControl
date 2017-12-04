@@ -2,13 +2,31 @@
 
 @section('content')
 
-    <script type="text/css" href="blog-home.css" rel="stylesheet">
-        </script>
 
 
-    <div class="blog-masthead">
+    <!--<ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" href="/food">Їжа</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/style">Стиль</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/fun">Розваги</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/sport">Спорт</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/science">Наука</a>
+        </li>
+    </ul>-->
+
+
+
+    <!--<div class="blog-masthead">
         <div class="container-fluid">
-            <nav class="blog-nav">
+            <nav class="blog-nav blog-nav-toggleable-md blog-nav-light bg-faded">
                 <a class="blog-nav-item" href="/food">Їжа</a>
                 <a class="blog-nav-item" href="/style">Стиль</a>
                 <a class="blog-nav-item" href="/fun">Розваги</a>
@@ -16,31 +34,66 @@
                 <a class="blog-nav-item" href="/science">Наука</a>
             </nav>
         </div>
-    </div>
+    </div>-->
 
 
 
+    <!--<div class="panel panel-primary">
+        <div class="panel-heading">
+            All Posts
+        </div>
+        <div class="panel-body">
+            <ul class="post-list">
+                <li><a href="">Lorem ipsum dolor sit amet, consectetur</a></li>
+                <li><a href="">Lorem ipsum dolor sit amet, consectetur</a></li>
+                <li><a href="">Lorem ipsum dolor sit amet, consectetur Lorem</a></li>
+                <li><a href="">Lorem ipsum dolor sit amet, </a></li>
+                <li><a href="">Lorem ipsum dolor sit amet, consectetur Lorem </a></li>
+            </ul>
+        </div>
+    </div>-->
 
 
 
 
 <div class="container-fluid">
 
-                   <div class="row">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="post">
+                <h3>Post Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
 
-                <div class="container-fluid col-sm-8 blog-main">
-                    <div class="card mb-4">
-                        <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-                        <div class="card-body">
-                            <h2 class="card-title">Post Title</h2>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                            <a href="#" class="btn btn-primary">Read More &rarr;</a>
-                        </div>
-                        <div class="card-footer text-muted">
-                            Posted on January 1, 2017 by
-                            <a href="#">Start Bootstrap</a>
-                        </div>
-                    </div>
+            <hr>
+
+            <div class="post">
+                <h3>Post Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+
+            <hr>
+
+            <div class="post">
+                <h3>Post Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+
+            <hr>
+
+            <div class="post">
+                <h3>Post Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+
+            <hr>
+        </div>
+    </div>
+
 
                     <nav>
                         <ul class="pager">
@@ -52,10 +105,6 @@
                 </div><!-- /.blog-main -->
 
                 <div class="col-sm-3 col-sm-offset-1 blog-sidebar container-fluid">
-                    <div class="sidebar-module sidebar-module-inset">
-                        <h4>About</h4>
-                        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                    </div>
                     <div class="sidebar-module">
                         <h4>Archives</h4>
                         <ol class="list-unstyled">
@@ -73,15 +122,6 @@
                             <li><a href="#">April 2013</a></li>
                         </ol>
                     </div>
-                    <div class="sidebar-module">
-                        <h4>Elsewhere</h4>
-                        <ol class="list-unstyled">
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Facebook</a></li>
-                        </ol>
-                    </div>
-                </div><!-- /.blog-sidebar -->
 
         </div><!-- /.row -->
 

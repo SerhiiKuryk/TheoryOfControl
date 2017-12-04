@@ -9,8 +9,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="search-bar.js">
-
+    <link rel="script" href="search-bar.js">
 
     <link href="http://getbootstrap.com/docs/3.3/examples/blog/blog.css" rel="stylesheet">
 
@@ -33,7 +32,8 @@
 <!--<div class="container">-->
 <div class="container-fluid">
     @include('layouts.top-menu')
-
+    <br>
+    <br>
     @yield('content')
 </div>
     <!--</div>-->
