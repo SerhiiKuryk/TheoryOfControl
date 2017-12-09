@@ -18,11 +18,11 @@
 
             <?php endif; ?>
 
+
+
+
                                             <ul class="nav navbar-nav">
                 <li><a href="<?php echo e(url('/create')); ?>" class="btn btn-success">Створити статтю</a></li>
-                                            <?php if(Sentinel::check()): ?>
-                    <li><a href="<?php echo e(url('/manage')); ?>" class="btn btn-warning">Мої статті</a></li>
-                        <?php endif; ?>
                 <li>
                     <form class="navbar-form" role="search">
                         <div class="input-group">
@@ -58,7 +58,11 @@
                 </li>
             </ul>
 
+
             <ul class="nav navbar-nav navbar-right">
+                <?php if(Sentinel::check()): ?>
+                    <li><a href="<?php echo e(url('/manage')); ?>" class="btn btn-warning">Мої статті</a></li>
+                <?php endif; ?>
                 <?php if(Sentinel::check()): ?>
                     <li >
                         <form action="/logout" method="POST" id="logout-form">
@@ -79,7 +83,7 @@
     </div>
     <ul class="nav nav-pills nav-justified navbar-default">
         <li class="nav-item">
-            <a class="nav-link active" href="#">Всі категорії</a>
+            <a class="nav-link active" href="/allCategories">Всі категорії</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/food">Їжа</a>
