@@ -5,38 +5,38 @@
     <div class="navbar navbar-primary">
         <div class="container-fluid">
 
-            @if(Auth::check()==false)
-            <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 20pt;">HandyBlog</a>
+            <?php if(Auth::check()==false): ?>
+            <a class="navbar-brand" href="<?php echo e(url('/')); ?>" style="font-size: 20pt;">HandyBlog</a>
 
             <ul class="nav navbar-nav navbar">
 
-            @else
+            <?php else: ?>
             {
 
-                @if(Sentinel::getUser()->roles()->first()->slug == 'admin')
-                        <a class="navbar-brand" href="{{ url('/ahome') }}">HandyBlog</a>
+                <?php if(Sentinel::getUser()->roles()->first()->slug == 'admin'): ?>
+                        <a class="navbar-brand" href="<?php echo e(url('/ahome')); ?>">HandyBlog</a>
 
                         <ul class="nav navbar-nav">
 
-                @elseif (Sentinel::getUser()->roles()->first()->slug == 'moderator')
-                                <a class="navbar-brand" href="{{ url('/') }}">HandyBlog</a>
+                <?php elseif(Sentinel::getUser()->roles()->first()->slug == 'moderator'): ?>
+                                <a class="navbar-brand" href="<?php echo e(url('/')); ?>">HandyBlog</a>
 
                                 <ul class="nav navbar-nav">
 
-                @elseif (Sentinel::getUser()->roles()->first()->slug == 'user')
-                                        <a class="navbar-brand" href="{{ url('/') }}">HandyBlog</a>
+                <?php elseif(Sentinel::getUser()->roles()->first()->slug == 'user'): ?>
+                                        <a class="navbar-brand" href="<?php echo e(url('/')); ?>">HandyBlog</a>
 
                                         <ul class="nav navbar-nav">
 
-                @endif
+                <?php endif; ?>
             }
-            @endif
+            <?php endif; ?>
 
 
-                <li><a href="{{ url('/create') }}" class="btn btn-success">Створити статтю</a></li>
-                                            @if(Sentinel::check())
-                    <li><a href="{{ url('/manage') }}" class="btn btn-warning">Мої статті</a></li>
-                        @endif
+                <li><a href="<?php echo e(url('/create')); ?>" class="btn btn-success">Створити статтю</a></li>
+                                            <?php if(Sentinel::check()): ?>
+                    <li><a href="<?php echo e(url('/manage')); ?>" class="btn btn-warning">Мої статті</a></li>
+                        <?php endif; ?>
                 <li>
                     <form class="navbar-form" role="search">
                         <div class="input-group">
@@ -71,20 +71,21 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                @if(Sentinel::check())
+                <?php if(Sentinel::check()): ?>
                     <li >
                         <form action="/logout" method="POST" id="logout-form">
-                            {{ csrf_field() }}
+                            <?php echo e(csrf_field()); ?>
+
                             <ul class="nav navbar-nav navbar-right" >
                             <li style="margin-right: 20px;"><a href="#" onClick="document.getElementById('logout-form').submit()">Logout</a>
                             </li>
                             </ul>
                         </form>
                     </li>
-                @else
+                <?php else: ?>
                     <li><a href="/register">Register</a></li>
                     <li><a href="/login">Login</a></li>
-                @endif
+                <?php endif; ?>
             </ul>
                                 </ul>
         </div>
