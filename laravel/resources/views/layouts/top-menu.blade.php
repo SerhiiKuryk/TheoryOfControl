@@ -1,18 +1,18 @@
-<div >
-
-
-    <!--<div class="navbar navbar-inverse">-->
+<div>
     <div class="navbar navbar-primary">
+
         <div class="container-fluid">
 
-            @if(Auth::check()==false)
-            <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 20pt;">HandyBlog</a>
+            <div class="row">
 
-            <ul class="nav navbar-nav navbar">
+                <div class="col-lg-1 nav navbar-nav navbar" style="margin-left: 70px;">
+
+                    @if(Auth::check()==false)
+
+                        <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 20pt;">HandyBlog</a>
 
             @else
             {
-
                 @if(Sentinel::getUser()->roles()->first()->slug == 'admin')
                         <a class="navbar-brand" href="{{ url('/ahome') }}">HandyBlog</a>
 
@@ -24,23 +24,27 @@
 
                 @endif
             }
-            @endif
+                    @endif
+                </div>
 
+                <div class="col-lg-2 col-lg-push-7">
 
-                <li><a href="{{ url('/create') }}" class="btn btn-success">Створити статтю</a></li>
-                                            @if(Sentinel::check())
-                    <li><a href="{{ url('/manage') }}" class="btn btn-warning">Мої статті</a></li>
+                    <a href="{{ url('/create') }}" class="btn btn-success">Створити статтю</a> </div>
+
+                @if(Sentinel::check())
+                    <div class="col-lg-2 col-lg-push-7"><a href="{{ url('/manage') }}" class="btn btn-warning">Мої статті</a></div>
+                    <div class="col-lg-4 col-lg-pull-2">
+                        @else
+                            <div class="col-lg-4">
                         @endif
-                <li>
-                    <form class="navbar-form" role="search">
-                        <div class="input-group">
 
+                    <form class="navbar-form" role="search " style="margin: 0px 0px 0px 0px;">
+                        <div class="input-group">
                             <div class="input-group-btn search-panel">
                                 <select id="inputState" class="form-control">
                                     <option selected><a href="#contains">по автору</a></option>
                                     <option><a href="#its_equal">по назві</a></option>
                                 </select>
-
                             </div>
 
                             <input type="text" class="form-control" placeholder="Search">
@@ -50,37 +54,43 @@
 									<span class="sr-only">Close</span>
 								</span>
 							</button>
+
 							<button type="submit" class="btn btn-default">
 								<span class="glyphicon glyphicon-search">
 									<span class="sr-only">Search</span>
 								</span>
 							</button>
-						</span>
+						    </span>
                         </div>
                     </form>
+                </div>
 
-
-
-                </li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
+            <div class="col-lg-2 nav navbar-nav navbar-right">
                 @if(Sentinel::check())
-                    <li >
-                        <form action="/logout" method="POST" id="logout-form">
+
+                    <form action="/logout" method="POST" id="logout-form">
                             {{ csrf_field() }}
-                            <ul class="nav navbar-nav navbar-right" >
-                            <li style="margin-right: 20px;"><a href="#" onClick="document.getElementById('logout-form').submit()">Logout</a>
-                            </li>
-                            </ul>
-                        </form>
-                    </li>
+                            <div class="nav navbar-nav navbar-right" >
+                            <a href="#" class="btn btn-primary" style="margin-right: 20px;" role="button" onClick="document.getElementById('logout-form').submit()">Logout</a>
+                            </div>
+                    </form>
                 @else
-                    <li><a href="/register">Register</a></li>
-                    <li><a href="/login">Login</a></li>
+
+                    <li>
+                        <div class="nav navbar-nav col-lg-1">
+                            <a class="btn btn-primary" href="/register" role="button">Register</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav navbar-nav col-lg-1">
+                            <a class="btn btn-primary" href="/login" role="button">Login</a>
+                        </div>
+                    </li>
+            </div>
+        </div>
                 @endif
-            </ul>
-                                </ul>
+</div>
+
         </div>
     </div>
     <ul class="nav nav-pills nav-justified navbar-default">
