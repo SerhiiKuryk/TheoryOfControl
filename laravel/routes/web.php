@@ -32,7 +32,6 @@ Route::get('/ahome','AdminController@ahome')->middleware('admin');
 Route::get('/mhome','ModeratorController@mhome')->middleware('moderator');
 Route::get('/uhome','UserController@uhome')->middleware('user');
 
-Route::get('/allCategories', 'CategoriesController@allCategories');
 Route::get('/food','CategoriesController@food');
 Route::get('/fun','CategoriesController@fun');
 Route::get('/science','CategoriesController@science');

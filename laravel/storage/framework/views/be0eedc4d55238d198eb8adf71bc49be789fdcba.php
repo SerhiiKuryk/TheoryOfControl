@@ -19,12 +19,12 @@
                         <ul class="nav navbar-nav">
 
                 <?php elseif(Sentinel::getUser()->roles()->first()->slug == 'moderator'): ?>
-                                <a class="navbar-brand" href="<?php echo e(url('/')); ?>">HandyBlog</a>
+                                <a class="navbar-brand" href="<?php echo e(url('/mhome')); ?>">HandyBlog</a>
 
                                 <ul class="nav navbar-nav">
 
                 <?php elseif(Sentinel::getUser()->roles()->first()->slug == 'user'): ?>
-                                        <a class="navbar-brand" href="<?php echo e(url('/')); ?>">HandyBlog</a>
+                                        <a class="navbar-brand" href="<?php echo e(url('/uhome')); ?>">HandyBlog</a>
 
                                         <ul class="nav navbar-nav">
 
@@ -43,8 +43,8 @@
 
                             <div class="input-group-btn search-panel">
                                 <select id="inputState" class="form-control">
-                                    <option selected>по автору</option>
-                                    <option>по назві</option>
+                                    <option selected><a href="#contains">по автору</a></option>
+                                    <option><a href="#its_equal">по назві</a></option>
                                 </select>
 
                             </div>

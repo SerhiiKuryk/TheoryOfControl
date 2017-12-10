@@ -98,8 +98,8 @@
                 <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" href="#ma">Місяць</a></li>
             </ul>
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="ta"> Avtor1 </div>
-                <div role="tabpanel" class="tab-pane" id="ma"> Avtor2 </div>
+                <div role="tabpanel" class="tab-pane active" id="ta"><a href="#"> Avtor1 </a></div>
+                <div role="tabpanel" class="tab-pane" id="ma"><a href="#">Avtor2</a></div>
             </div>
         </div>
         <hr>
@@ -110,8 +110,8 @@
                 <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" href="#ma">Місяць</a></li>
             </ul>
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="ta"> Post1 </div>
-                <div role="tabpanel" class="tab-pane" id="ma"> Post2 </div>
+                <div role="tabpanel" class="tab-pane active" id="ta"><a href="#">Post1</a></div>
+                <div role="tabpanel" class="tab-pane" id="ma" href="#"><a href="#">Post2</a></div>
             </div>
             <hr>
         </div>
