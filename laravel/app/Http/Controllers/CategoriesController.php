@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 
 class CategoriesController extends Controller
 {
+    public function allCategories(){
+        return view('categories.allCategories');
+    }
     public function food(){
         return view('categories.food');
     }

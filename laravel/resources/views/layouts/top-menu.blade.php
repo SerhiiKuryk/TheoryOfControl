@@ -16,17 +16,11 @@
                 @if(Sentinel::getUser()->roles()->first()->slug == 'admin')
                         <a class="navbar-brand" href="{{ url('/ahome') }}">HandyBlog</a>
 
-                        <ul class="nav navbar-nav">
-
                 @elseif (Sentinel::getUser()->roles()->first()->slug == 'moderator')
                                 <a class="navbar-brand" href="{{ url('/mhome') }}">HandyBlog</a>
 
-                                <ul class="nav navbar-nav">
-
                 @elseif (Sentinel::getUser()->roles()->first()->slug == 'user')
                                         <a class="navbar-brand" href="{{ url('/uhome') }}">HandyBlog</a>
-
-                                        <ul class="nav navbar-nav">
 
                 @endif
             }
@@ -91,7 +85,7 @@
     </div>
     <ul class="nav nav-pills nav-justified navbar-default">
         <li class="nav-item">
-            <a class="nav-link active" href="#">Всі категорії</a>
+            <a class="nav-link active" href="/allCategories">Всі категорії</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/food">Їжа</a>

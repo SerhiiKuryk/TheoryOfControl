@@ -55,9 +55,8 @@
 
 
 <div class="container-fluid">
-
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-sm-10">
             <div class="post">
                 <h3>Post Title</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
@@ -90,39 +89,42 @@
 
             <hr>
         </div>
-    </div>
 
-
-                    <nav>
-                        <ul class="pager">
-                            <li><a href="#">Previous</a></li>
-                            <li><a href="#">Next</a></li>
-                        </ul>
-                    </nav>
-
-                </div><!-- /.blog-main -->
-
-                <div class="col-sm-3 col-sm-offset-1 blog-sidebar container-fluid">
-                    <div class="sidebar-module">
-                        <h4>Archives</h4>
-                        <ol class="list-unstyled">
-                            <li><a href="#">March 2014</a></li>
-                            <li><a href="#">February 2014</a></li>
-                            <li><a href="#">January 2014</a></li>
-                            <li><a href="#">December 2013</a></li>
-                            <li><a href="#">November 2013</a></li>
-                            <li><a href="#">October 2013</a></li>
-                            <li><a href="#">September 2013</a></li>
-                            <li><a href="#">August 2013</a></li>
-                            <li><a href="#">July 2013</a></li>
-                            <li><a href="#">June 2013</a></li>
-                            <li><a href="#">May 2013</a></li>
-                            <li><a href="#">April 2013</a></li>
-                        </ol>
-                    </div>
-
+    <div class="col-sm-2 container-fluid">
+        <div class="sidebar-module">
+            <h4>Популярні автори</h4>
+            <ul class="nav nav-tabs">
+                <li class="nav-item active"><a class="nav-link" data-toggle="tab" role="tab" href="#ta">Тиждень</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" href="#ma">Місяць</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="ta"><a href="#"> Avtor1 </a></div>
+                <div role="tabpanel" class="tab-pane" id="ma"><a href="#">Avtor2</a></div>
+            </div>
+        </div>
+        <hr>
+        <div class="sidebar-module">
+            <h4>Популярні статті</h4>
+            <ul class="nav nav-tabs">
+                <li class="nav-item active"><a class="nav-link" data-toggle="tab" role="tab" href="#ta">Тиждень</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" href="#ma">Місяць</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="ta"><a href="#">Post1</a></div>
+                <div role="tabpanel" class="tab-pane" id="ma" href="#"><a href="#">Post2</a></div>
+            </div>
+            <hr>
+        </div>
+    </div><!-- /.blog-main -->
         </div><!-- /.row -->
-
+    <div class="row">
+    <nav class="col-lg-4 col-lg-offset-4">
+        <ul class="pager">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">Next</a></li>
+        </ul>
+    </nav>
+    </div>
     </div><!-- /.container -->
 
     <footer class="blog-footer">
