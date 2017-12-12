@@ -7,10 +7,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="script" href="search-bar.js">
-
     <link href="http://getbootstrap.com/docs/3.3/examples/blog/blog.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -26,6 +23,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
+    <script src="search-bar.js"></script>
 </head>
 
 <body>
@@ -33,7 +31,6 @@
 <!--<div class="container">-->
 <div class="container-fluid">
     <?php echo $__env->make('layouts.top-menu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-    <br>
     <br>
     <?php echo $__env->yieldContent('content'); ?>
 </div>

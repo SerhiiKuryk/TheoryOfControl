@@ -1,4 +1,4 @@
-<div>
+<div style="margin-top: 20px;">
     <div class="navbar navbar-primary">
 
         <div class="container-fluid">

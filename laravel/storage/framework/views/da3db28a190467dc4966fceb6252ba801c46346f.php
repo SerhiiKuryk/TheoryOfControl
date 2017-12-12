@@ -60,7 +60,7 @@
             <div class="post">
                 <h3>Post Title</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <a href="#" class="btn btn-primary col-sm-pull-3">Read More</a>
             </div>
 
             <hr>
@@ -128,10 +128,10 @@
     </div><!-- /.container -->
 
     <footer class="blog-footer">
-        <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-        <p>
-            <a href="#">Back to top</a>
-        </p>
+        <div class="col-lg-2">
+            <a href="#">Умови</a>
+            <a href="#">Конфіденційність</a>
+        </div>
     </footer>
 
 
