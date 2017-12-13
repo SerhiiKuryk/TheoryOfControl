@@ -12,18 +12,6 @@
                         <a class="navbar-brand" href="<?php echo e(url('/')); ?>" style="font-size: 20pt;">HandyBlog</a>
 
             <?php else: ?>
-            {
-                <?php if(Sentinel::getUser()->roles()->first()->slug == 'admin'): ?>
-                        <a class="navbar-brand" href="<?php echo e(url('/ahome')); ?>">HandyBlog</a>
-
-                <?php elseif(Sentinel::getUser()->roles()->first()->slug == 'moderator'): ?>
-                                <a class="navbar-brand" href="<?php echo e(url('/mhome')); ?>">HandyBlog</a>
-
-                <?php elseif(Sentinel::getUser()->roles()->first()->slug == 'user'): ?>
-                                        <a class="navbar-brand" href="<?php echo e(url('/uhome')); ?>">HandyBlog</a>
-
-                <?php endif; ?>
-            }
                     <?php endif; ?>
                 </div>
 

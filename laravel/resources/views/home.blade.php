@@ -131,7 +131,7 @@
 
     <footer class="blog-footer">
         <div class="col-lg-2">
-            <a href="#">Умови</a>
+            <a href="/conditions">Умови</a>
             <a href="#">Конфіденційність</a>
         </div>
     </footer>
