@@ -45,7 +45,30 @@
                                 <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation" required>
                             </div>
                         </div>
-
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" required>
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Я погоджуюсь з <a id="modal" href="#modal">умовами</a> блога</span>
+                            <div class="modal" tabindex="-1" id="modal" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Modal body text goes here.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
                         <div class="form-group">
                             <input type="submit" value="Register" class="btn btn-success pull-right">
                         </div>
@@ -54,4 +77,5 @@
             </div>
         </div>
     </div>
+
 @endsection

@@ -1,4 +1,4 @@
-<div>
+<div style="margin-top: 20px;">
     <div class="navbar navbar-primary">
 
         <div class="container-fluid">
@@ -12,18 +12,6 @@
                         <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 20pt;">HandyBlog</a>
 
             @else
-            {
-                @if(Sentinel::getUser()->roles()->first()->slug == 'admin')
-                        <a class="navbar-brand" href="{{ url('/ahome') }}">HandyBlog</a>
-
-                @elseif (Sentinel::getUser()->roles()->first()->slug == 'moderator')
-                                <a class="navbar-brand" href="{{ url('/mhome') }}">HandyBlog</a>
-
-                @elseif (Sentinel::getUser()->roles()->first()->slug == 'user')
-                                        <a class="navbar-brand" href="{{ url('/uhome') }}">HandyBlog</a>
-
-                @endif
-            }
                     @endif
                 </div>
 

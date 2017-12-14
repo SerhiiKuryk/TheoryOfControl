@@ -128,10 +128,10 @@
     </div><!-- /.container -->
 
     <footer class="blog-footer">
-        <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-        <p>
-            <a href="#">Back to top</a>
-        </p>
+        <div class="col-lg-2">
+            <a href="/conditions">Умови</a>
+            <a href="#">Конфіденційність</a>
+        </div>
     </footer>
 
 
