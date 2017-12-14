@@ -168,6 +168,7 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
+        SleepingOwl\Admin\Providers\SleepingOwlServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -236,6 +237,16 @@ return [
         'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
+        'Admin'         => 'SleepingOwl\Admin\Admin',
+        'AdminAuth'     => 'SleepingOwl\AdminAuth\Facades\AdminAuth',
+        'Column'        => 'SleepingOwl\Admin\Columns\Column',
+        'ColumnFilter'  => 'SleepingOwl\Admin\ColumnFilters\ColumnFilter',
+        'Filter'        => 'SleepingOwl\Admin\Filter\Filter',
+        'AdminDisplay'  => 'SleepingOwl\Admin\Display\AdminDisplay',
+        'AdminForm'     => 'SleepingOwl\Admin\Form\AdminForm',
+        'AdminTemplate' => 'SleepingOwl\Admin\Templates\Facade\AdminTemplate',
+        'FormItem'      => 'SleepingOwl\Admin\FormItems\FormItem',
 
     ],
 
