@@ -5,7 +5,7 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title"> Register </h3>
+                    <h3 class="panel-title"> Реєстрація </h3>
                 </div>
 
 
@@ -26,7 +26,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
 
-                                <input type="text" name="user_name" class="form-control" placeholder="User Name" required>
+                                <input type="text" name="user_name" class="form-control" placeholder="Ім'я користувача" required>
                             </div>
                         </div>
 
@@ -34,7 +34,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
 
-                                <input type="password" name="password" class="form-control" placeholder="Password" required>
+                                <input type="password" name="password" class="form-control" placeholder="Пароль" required>
                             </div>
                         </div>
 
@@ -42,7 +42,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
 
-                                <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation" required>
+                                <input type="password" name="password_confirmation" class="form-control" placeholder="Підтверження паролю" required>
                             </div>
                         </div>
                         <label class="custom-control custom-checkbox">
@@ -70,7 +70,7 @@
                             </div>
                         </label>
                         <div class="form-group">
-                            <input type="submit" value="Register" class="btn btn-success pull-right">
+                            <input type="submit" value="Зареєструватися" class="btn btn-success pull-right">
                         </div>
                     </form>
                 </div>

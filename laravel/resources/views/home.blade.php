@@ -7,33 +7,33 @@
 
         <div class="col-sm-10">
             <div class="post">
-                <h3>Post Title</h3>
+                <h3>Заголовок статті</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <a href="#" class="btn btn-primary">Читати більше</a>
             </div>
 
             <hr>
 
             <div class="post">
-                <h3>Post Title</h3>
+                <h3>Заголовок статті</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <a href="#" class="btn btn-primary">Читати більше</a>
             </div>
 
             <hr>
 
             <div class="post">
-                <h3>Post Title</h3>
+                <h3>Заголовок статті</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <a href="#" class="btn btn-primary">Читати більше</a>
             </div>
 
             <hr>
 
             <div class="post">
-                <h3>Post Title</h3>
+                <h3>Заголовок статті</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <a href="#" class="btn btn-primary">Читати більше</a>
             </div>
 
             <hr>
@@ -55,10 +55,10 @@
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="tab-1">
-                        <a href="#"> Avtor1 </a>
+                        <a href="#"> Автор1 </a>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="tab-2">
-                    <a href="#">Avtor2</a>
+                    <a href="#"> Автор2 </a>
                     </div>
                 </div>
             </div>
@@ -78,10 +78,10 @@
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="ta">
-                        <a href="#">Post1</a>
+                        <a href="#">Стаття1</a>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="ma" href="#">
-                        <a href="#">Post2</a>
+                        <a href="#">Стаття2</a>
                     </div>
                 </div>
 
@@ -93,8 +93,8 @@
     <div class="row">
         <nav class="col-lg-4 col-lg-offset-4">
             <ul class="pager">
-                <li><a href="#">Previous</a></li>
-                <li><a href="#">Next</a></li>
+                <li><a href="#">Попередня</a></li>
+                <li><a href="#">Наступна</a></li>
             </ul>
         </nav>
     </div>

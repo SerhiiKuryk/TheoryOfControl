@@ -5,7 +5,7 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title"> Login </h3>
+                    <h3 class="panel-title"> Увійти </h3>
                 </div>
 
 
@@ -27,14 +27,14 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
 
-                                <input type="password" name="password" class="form-control" placeholder="Password"
+                                <input type="password" name="password" class="form-control" placeholder="Пароль"
                                 required>
                             </div>
                         </div>
 
 
                         <div class="form-group">
-                            <input type="submit" value="Login" class="btn btn-success pull-right">
+                            <input type="submit" value="Увійти" class="btn btn-success pull-right">
                         </div>
                     </form>
                 </div>

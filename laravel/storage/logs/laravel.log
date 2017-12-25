@@ -6202,3 +6202,6 @@ Stack trace:
 #3 E:\OpenServer\OSPanel\domains\TheoryOfControl\laravel\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #4 E:\OpenServer\OSPanel\domains\TheoryOfControl\laravel\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #5 {main}  
+[2017-12-25 16:10:21] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function roles() on null' in C:\openserver\domains\laravel\app\Http\Controllers\LoginController.php:17
+Stack trace:
+#0 {main}  

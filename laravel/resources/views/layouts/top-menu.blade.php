@@ -38,17 +38,17 @@
                                 </select>
                             </div>
 
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Пошук">
                             <span class="input-group-btn">
                                 <button type="reset" class="btn btn-default">
 								    <span class="glyphicon glyphicon-remove">
-									    <span class="sr-only">Close</span>
+									    <span class="sr-only">Закрити</span>
 								    </span>
 							    </button>
 
 							    <button type="submit" class="btn btn-default">
 								    <span class="glyphicon glyphicon-search">
-									    <span class="sr-only">Search</span>
+									    <span class="sr-only">Пошук</span>
 								    </span>
 							    </button>
 						    </span>
@@ -62,19 +62,19 @@
                     <form action="/logout" method="POST" id="logout-form">
                             {{ csrf_field() }}
                             <div class="nav navbar-nav navbar-right" >
-                            <a href="#" class="btn btn-primary" style="margin-right: 20px;" role="button" onClick="document.getElementById('logout-form').submit()">Logout</a>
+                            <a href="#" class="btn btn-primary" style="margin-right: 20px;" role="button" onClick="document.getElementById('logout-form').submit()">Вийти</a>
                             </div>
                     </form>
                 @else
 
                     <li>
                         <div class="nav navbar-nav col-lg-1">
-                            <a class="btn btn-primary" href="/register" role="button">Register</a>
+                            <a class="btn btn-primary" href="/register" role="button">Зареєструватися</a>
                         </div>
                     </li>
                     <li>
                         <div class="nav navbar-nav col-lg-1">
-                            <a class="btn btn-primary" href="/login" role="button">Login</a>
+                            <a class="btn btn-primary" href="/login" role="button">Увійти</a>
                         </div>
                     </li>
             </div>
