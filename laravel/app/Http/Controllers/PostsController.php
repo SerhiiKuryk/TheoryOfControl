@@ -90,9 +90,9 @@ class PostsController extends Controller
 
     public function createpost(Request $request)
     {
-        
+        DB::table('articles')->insert( ['category_id' => $_POST['category'], 'user_id' => 1, 'title' => $_POST['title'], 'text' => $_POST['text'], 'image' => '' ] );
         //var_dump($_POST);
-        //return redirect('/');
+        return redirect('/');
     }
 
     public function getCategories(){
