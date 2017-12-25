@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="col-lg-2 col-lg-push-7">
-                    <a href="<?php echo e(url('/create')); ?>" class="btn btn-success">Створити статтю</a>
+                    <a href="<?php echo e(url('/post')); ?>" class="btn btn-success">Створити статтю</a>
                 </div>
 
                 <?php if(Sentinel::check()): ?>

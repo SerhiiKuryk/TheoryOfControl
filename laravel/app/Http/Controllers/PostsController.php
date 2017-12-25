@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostsController extends Controller
 {
@@ -80,5 +81,23 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function post()
+    {
+        return view('posts.post');
+    }
+
+    public function createpost(Request $request)
+    {
+        
+        //var_dump($_POST);
+        //return redirect('/');
+    }
+
+    public function getCategories(){
+        $categories = DB::table('categories')->get();
+
+        return view('posts.post', [ 'categories' => $categories ]);
     }
 }

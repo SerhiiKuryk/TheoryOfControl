@@ -46,9 +46,13 @@ Route::get('/science','CategoriesController@scienceArticles');
 Route::get('/sport', 'CategoriesController@sportArticles');
 Route::get('/style', 'CategoriesController@styleArticles');
 
-Route::get('/create', function () {
-    return view('posts.create');
-});
+
+
+Route::get('/post','PostsController@post');
+Route::post('/post', 'PostsController@createpost');
+
+Route::get('/post', 'PostsController@getCategories');
+
 
 Route::get('/manage', function () {
     return view('posts.manage');

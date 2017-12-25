@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="col-lg-2 col-lg-push-7">
-                    <a href="{{ url('/create') }}" class="btn btn-success">Створити статтю</a>
+                    <a href="{{ url('/post') }}" class="btn btn-success">Створити статтю</a>
                 </div>
 
                 @if(Sentinel::check())
