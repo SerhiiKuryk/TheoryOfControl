@@ -1,4 +1,4 @@
-<div>
+<div style="margin-top: 20px;">
     <div class="navbar navbar-primary">
 
         <div class="container-fluid">
@@ -11,28 +11,19 @@
 
                         <a class="navbar-brand" href="<?php echo e(url('/')); ?>" style="font-size: 20pt;">HandyBlog</a>
 
-            <?php else: ?>
-            {
-                <?php if(Sentinel::getUser()->roles()->first()->slug == 'admin'): ?>
-                        <a class="navbar-brand" href="<?php echo e(url('/ahome')); ?>">HandyBlog</a>
-
-                <?php elseif(Sentinel::getUser()->roles()->first()->slug == 'moderator'): ?>
-                                <a class="navbar-brand" href="<?php echo e(url('/mhome')); ?>">HandyBlog</a>
-
-                <?php elseif(Sentinel::getUser()->roles()->first()->slug == 'user'): ?>
-                                        <a class="navbar-brand" href="<?php echo e(url('/uhome')); ?>">HandyBlog</a>
-
-                <?php endif; ?>
-            }
+                <?php else: ?>
                     <?php endif; ?>
                 </div>
 
                 <div class="col-lg-2 col-lg-push-7">
-
-                    <a href="<?php echo e(url('/create')); ?>" class="btn btn-success">Створити статтю</a> </div>
+                    <a href="<?php echo e(url('/create')); ?>" class="btn btn-success">Створити статтю</a>
+                </div>
 
                 <?php if(Sentinel::check()): ?>
-                    <div class="col-lg-2 col-lg-push-7"><a href="<?php echo e(url('/manage')); ?>" class="btn btn-warning">Мої статті</a></div>
+                    <div class="col-lg-2 col-lg-push-7">
+                        <a href="<?php echo e(url('/manage')); ?>" class="btn btn-warning">Мої статті</a>
+                    </div>
+
                     <div class="col-lg-4 col-lg-pull-2">
                         <?php else: ?>
                             <div class="col-lg-4">
@@ -47,23 +38,23 @@
                                 </select>
                             </div>
 
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Пошук">
                             <span class="input-group-btn">
-							<button type="reset" class="btn btn-default">
-								<span class="glyphicon glyphicon-remove">
-									<span class="sr-only">Close</span>
-								</span>
-							</button>
+                                <button type="reset" class="btn btn-default">
+								    <span class="glyphicon glyphicon-remove">
+									    <span class="sr-only">Закрити</span>
+								    </span>
+							    </button>
 
-							<button type="submit" class="btn btn-default">
-								<span class="glyphicon glyphicon-search">
-									<span class="sr-only">Search</span>
-								</span>
-							</button>
+							    <button type="submit" class="btn btn-default">
+								    <span class="glyphicon glyphicon-search">
+									    <span class="sr-only">Пошук</span>
+								    </span>
+							    </button>
 						    </span>
                         </div>
                     </form>
-                </div>
+                            </div>
 
             <div class="col-lg-2 nav navbar-nav navbar-right">
                 <?php if(Sentinel::check()): ?>
@@ -72,28 +63,28 @@
                             <?php echo e(csrf_field()); ?>
 
                             <div class="nav navbar-nav navbar-right" >
-                            <a href="#" class="btn btn-primary" style="margin-right: 20px;" role="button" onClick="document.getElementById('logout-form').submit()">Logout</a>
+                            <a href="#" class="btn btn-primary" style="margin-right: 20px;" role="button" onClick="document.getElementById('logout-form').submit()">Вийти</a>
                             </div>
                     </form>
                 <?php else: ?>
 
                     <li>
                         <div class="nav navbar-nav col-lg-1">
-                            <a class="btn btn-primary" href="/register" role="button">Register</a>
+                            <a class="btn btn-primary" href="/register" role="button">Зареєструватися</a>
                         </div>
                     </li>
                     <li>
                         <div class="nav navbar-nav col-lg-1">
-                            <a class="btn btn-primary" href="/login" role="button">Login</a>
+                            <a class="btn btn-primary" href="/login" role="button">Увійти</a>
                         </div>
                     </li>
             </div>
         </div>
                 <?php endif; ?>
-</div>
-
+            </div>
         </div>
     </div>
+
     <ul class="nav nav-pills nav-justified navbar-default">
         <li class="nav-item">
             <a class="nav-link active" href="/allCategories">Всі категорії</a>

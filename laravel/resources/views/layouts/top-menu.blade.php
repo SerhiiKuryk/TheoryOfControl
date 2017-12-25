@@ -11,16 +11,19 @@
 
                         <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 20pt;">HandyBlog</a>
 
-            @else
+                @else
                     @endif
                 </div>
 
                 <div class="col-lg-2 col-lg-push-7">
-
-                    <a href="{{ url('/create') }}" class="btn btn-success">Створити статтю</a> </div>
+                    <a href="{{ url('/create') }}" class="btn btn-success">Створити статтю</a>
+                </div>
 
                 @if(Sentinel::check())
-                    <div class="col-lg-2 col-lg-push-7"><a href="{{ url('/manage') }}" class="btn btn-warning">Мої статті</a></div>
+                    <div class="col-lg-2 col-lg-push-7">
+                        <a href="{{ url('/manage') }}" class="btn btn-warning">Мої статті</a>
+                    </div>
+
                     <div class="col-lg-4 col-lg-pull-2">
                         @else
                             <div class="col-lg-4">
@@ -35,23 +38,23 @@
                                 </select>
                             </div>
 
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Пошук">
                             <span class="input-group-btn">
-							<button type="reset" class="btn btn-default">
-								<span class="glyphicon glyphicon-remove">
-									<span class="sr-only">Close</span>
-								</span>
-							</button>
+                                <button type="reset" class="btn btn-default">
+								    <span class="glyphicon glyphicon-remove">
+									    <span class="sr-only">Закрити</span>
+								    </span>
+							    </button>
 
-							<button type="submit" class="btn btn-default">
-								<span class="glyphicon glyphicon-search">
-									<span class="sr-only">Search</span>
-								</span>
-							</button>
+							    <button type="submit" class="btn btn-default">
+								    <span class="glyphicon glyphicon-search">
+									    <span class="sr-only">Пошук</span>
+								    </span>
+							    </button>
 						    </span>
                         </div>
                     </form>
-                </div>
+                            </div>
 
             <div class="col-lg-2 nav navbar-nav navbar-right">
                 @if(Sentinel::check())
@@ -59,28 +62,28 @@
                     <form action="/logout" method="POST" id="logout-form">
                             {{ csrf_field() }}
                             <div class="nav navbar-nav navbar-right" >
-                            <a href="#" class="btn btn-primary" style="margin-right: 20px;" role="button" onClick="document.getElementById('logout-form').submit()">Logout</a>
+                            <a href="#" class="btn btn-primary" style="margin-right: 20px;" role="button" onClick="document.getElementById('logout-form').submit()">Вийти</a>
                             </div>
                     </form>
                 @else
 
                     <li>
                         <div class="nav navbar-nav col-lg-1">
-                            <a class="btn btn-primary" href="/register" role="button">Register</a>
+                            <a class="btn btn-primary" href="/register" role="button">Зареєструватися</a>
                         </div>
                     </li>
                     <li>
                         <div class="nav navbar-nav col-lg-1">
-                            <a class="btn btn-primary" href="/login" role="button">Login</a>
+                            <a class="btn btn-primary" href="/login" role="button">Увійти</a>
                         </div>
                     </li>
             </div>
         </div>
                 @endif
-</div>
-
+            </div>
         </div>
     </div>
+
     <ul class="nav nav-pills nav-justified navbar-default">
         <li class="nav-item">
             <a class="nav-link active" href="/allCategories">Всі категорії</a>
