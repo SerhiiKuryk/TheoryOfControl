@@ -63,7 +63,7 @@ class MigrationCartalystSentinel extends Migration
             $table->string('email');
             $table->string('password');
             $table->timestamp('last_login')->nullable();
-            $table->string('user_name');
+            $table->string('user_name')->nullable();
             $table->boolean('access')->default(1);
             $table->timestamps();
 
@@ -84,8 +84,8 @@ class MigrationCartalystSentinel extends Migration
             $table->timestamp('publication_date')->nullable();
             $table->timestamps();
 
-            $table->unique('user_id');
-            $table->unique('category_id');
+            //$table->unique('user_id');
+            //$table->unique('category_id');
 
 
             $table->foreign('user_id')
