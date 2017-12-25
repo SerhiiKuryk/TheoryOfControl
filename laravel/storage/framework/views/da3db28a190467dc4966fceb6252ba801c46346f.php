@@ -91,32 +91,50 @@
         </div>
 
     <div class="col-sm-2 container-fluid">
-        <div class="sidebar-module">
+        <div class="tabs">
             <h4>Популярні автори</h4>
-            <ul class="nav nav-tabs">
-                <li class="nav-item active"><a class="nav-link" data-toggle="tab" role="tab" href="#ta">Тиждень</a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" href="#ma">Місяць</a></li>
-            </ul>
+                 <ul class="nav nav-tabs">
+                     <li class=" nav-item active">
+                         <a role="tab" class="nav-link active"  data-toggle="tab" href="#tab-1">Тиждень</a>
+                     </li>
+                     <li class="nav-item">
+                         <a data-toggle="tab" class="navbar-link disabled" href="#tab-2">Місяць</a>
+                     </li>
+                 </ul>
+
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="ta"><a href="#"> Avtor1 </a></div>
-                <div role="tabpanel" class="tab-pane" id="ma"><a href="#">Avtor2</a></div>
+                <div role="tabpanel" class="tab-pane active" id="tab-1">
+                    <a href="#"> Avtor1 </a>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab-2">
+                    <a href="#">Avtor2</a>
+                </div>
             </div>
         </div>
         <hr>
         <div class="sidebar-module">
             <h4>Популярні статті</h4>
-            <ul class="nav nav-tabs">
-                <li class="nav-item active"><a class="nav-link" data-toggle="tab" role="tab" href="#ta">Тиждень</a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" href="#ma">Місяць</a></li>
-            </ul>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item active">
+                        <a class="nav-link" data-toggle="tab" role="tab" href="#ta">Тиждень</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" role="tab" href="#ma">Місяць</a>
+                    </li>
+                </ul>
+
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="ta"><a href="#">Post1</a></div>
-                <div role="tabpanel" class="tab-pane" id="ma" href="#"><a href="#">Post2</a></div>
+                <div role="tabpanel" class="tab-pane active" id="ta">
+                    <a href="#">Post1</a>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="ma" href="#">
+                    <a href="#">Post2</a>
+                </div>
             </div>
             <hr>
         </div>
     </div><!-- /.blog-main -->
-        </div><!-- /.row -->
+    </div><!-- /.row -->
     <div class="row">
     <nav class="col-lg-4 col-lg-offset-4">
         <ul class="pager">
