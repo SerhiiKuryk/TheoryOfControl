@@ -6,17 +6,27 @@
             <div class="row">
 
                 <div class="col-lg-1 nav navbar-nav navbar" style="margin-left: 70px;">
-
-                    @if(Auth::check()==false)
+                    
 
                         <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 20pt;">HandyBlog</a>
 
+<<<<<<< HEAD
                 @else
                     @endif
                 </div>
 
                 <div class="col-lg-2 col-lg-push-7">
                     <a href="{{ url('/create') }}" class="btn btn-success">Створити статтю</a>
+=======
+                </div>
+
+                <div class="col-lg-2 col-lg-push-7">
+                    @if(Sentinel::check())
+                    <a href="{{ url('/post') }}" class="btn btn-success">Створити статтю</a>
+                        @else
+                        <a href="{{ url('/login') }}" class="btn btn-success">Створити статтю</a>
+                        @endif
+>>>>>>> 3712e080726f66956e0287b4fbb2f7829c5bbf0d
                 </div>
 
                 @if(Sentinel::check())

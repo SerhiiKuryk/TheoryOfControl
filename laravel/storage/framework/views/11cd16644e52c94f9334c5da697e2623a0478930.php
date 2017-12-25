@@ -1,14 +1,24 @@
 <?php $__env->startSection('content'); ?>
     <div class="container">
+<<<<<<< HEAD
     <form action="" class="was-validated">
+=======
+    <form action="createpost" method="post" class="was-validated">
+>>>>>>> 3712e080726f66956e0287b4fbb2f7829c5bbf0d
         <div class="form-group">
             <label for="">Заголовок статті</label>
             <input type="text" name="" class="form-control" placeholder="Post title">
         </div>
 
+<<<<<<< HEAD
         <label class="custom-file">Додати зображення</label>
             <input type="file" id="file" class="custom-file-input" required>
             <span class="custom-file-control"></span>
+=======
+        <!--<label class="custom-file">Додати зображення</label>
+            <input type="file" id="file" class="custom-file-input" required>
+            <span class="custom-file-control"></span>-->
+>>>>>>> 3712e080726f66956e0287b4fbb2f7829c5bbf0d
         <br>
         <div class="form-group">
             <label for="">Категорія статті</label>

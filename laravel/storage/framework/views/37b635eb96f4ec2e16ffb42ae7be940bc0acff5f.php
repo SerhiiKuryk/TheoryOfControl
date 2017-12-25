@@ -1,5 +1,6 @@
 <div style="margin-top: 20px;">
     <div class="navbar navbar-primary">
+<<<<<<< HEAD
 
         <div class="container-fluid">
 
@@ -17,6 +18,26 @@
 
                 <div class="col-lg-2 col-lg-push-7">
                     <a href="<?php echo e(url('/create')); ?>" class="btn btn-success">Створити статтю</a>
+=======
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-lg-1 nav navbar-nav navbar" style="margin-left: 70px;">
+                    
+
+                        <a class="navbar-brand" href="<?php echo e(url('/')); ?>" style="font-size: 20pt;">HandyBlog</a>
+
+                </div>
+
+                <div class="col-lg-2 col-lg-push-7">
+                    <?php if(Sentinel::check()): ?>
+                    <a href="<?php echo e(url('/post')); ?>" class="btn btn-success">Створити статтю</a>
+                        <?php else: ?>
+                        <a href="<?php echo e(url('/login')); ?>" class="btn btn-success">Створити статтю</a>
+                        <?php endif; ?>
+>>>>>>> 3712e080726f66956e0287b4fbb2f7829c5bbf0d
                 </div>
 
                 <?php if(Sentinel::check()): ?>
