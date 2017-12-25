@@ -6,17 +6,18 @@
             <div class="row">
 
                 <div class="col-lg-1 nav navbar-nav navbar" style="margin-left: 70px;">
-
-                    <?php if(Auth::check()==false): ?>
+                    
 
                         <a class="navbar-brand" href="<?php echo e(url('/')); ?>" style="font-size: 20pt;">HandyBlog</a>
 
-                <?php else: ?>
-                    <?php endif; ?>
                 </div>
 
                 <div class="col-lg-2 col-lg-push-7">
+                    <?php if(Sentinel::check()): ?>
                     <a href="<?php echo e(url('/post')); ?>" class="btn btn-success">Створити статтю</a>
+                        <?php else: ?>
+                        <a href="<?php echo e(url('/login')); ?>" class="btn btn-success">Створити статтю</a>
+                        <?php endif; ?>
                 </div>
 
                 <?php if(Sentinel::check()): ?>
