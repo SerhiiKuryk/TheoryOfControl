@@ -1,90 +1,64 @@
 <?php $__env->startSection('content'); ?>
 
-<div class="container-fluid">
-    <div class="row">
+    <div class="container-fluid">
+        <div class="row">
 
-        <div class="col-sm-10">
-            <div class="post">
-                <h3>Заголовок статті</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
-                <a href="#" class="btn btn-primary">Читати більше</a>
-            </div>
-
-            <hr>
-
-            <div class="post">
-                <h3>Заголовок статті</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
-                <a href="#" class="btn btn-primary">Читати більше</a>
-            </div>
-
-            <hr>
-
-            <div class="post">
-                <h3>Заголовок статті</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
-                <a href="#" class="btn btn-primary">Читати більше</a>
-            </div>
-
-            <hr>
-
-            <div class="post">
-                <h3>Заголовок статті</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
-                <a href="#" class="btn btn-primary">Читати більше</a>
-            </div>
-
-            <hr>
-        </div>
-
-        <div class="col-sm-2 container-fluid">
-            <div class="tabs">
-                <h4>Популярні автори</h4>
-
-                <ul class="nav nav-tabs">
-
-                    <li class=" nav-item active">
-                        <a role="tab" class="nav-link active"  data-toggle="tab" href="#tab-1">Тиждень</a>
-                    </li>
-                    <li class="nav-item">
-                        <a data-toggle="tab" class="navbar-link disabled" href="#tab-2">Місяць</a>
-                    </li>
-                </ul>
-
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="tab-1">
-                        <a href="#"> Автор1 </a>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="tab-2">
-                    <a href="#"> Автор2 </a>
-                    </div>
+            <div class="col-sm-10">
+                <div class="post">
+                    <h3>Заголовок статті</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
+                    <a href="#" class="btn btn-primary">Читати більше</a>
                 </div>
-            </div>
 
-            <hr>
+                <hr>
 
-            <div class="sidebar-module">
-                <h4>Популярні статті</h4>
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item active">
-                            <a class="nav-link" data-toggle="tab" role="tab" href="#ta">Тиждень</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" role="tab" href="#ma">Місяць</a>
-                        </li>
-                    </ul>
+                <div class="post">
+                    <h3>Заголовок статті</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
+                    <a href="#" class="btn btn-primary">Читати більше</a>
+                </div>
 
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="ta">
-                        <a href="#">Стаття1</a>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="ma" href="#">
-                        <a href="#">Стаття2</a>
-                    </div>
+                <hr>
+
+                <div class="post">
+                    <h3>Заголовок статті</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
+                    <a href="#" class="btn btn-primary">Читати більше</a>
+                </div>
+
+                <hr>
+
+                <div class="post">
+                    <h3>Заголовок статті</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis amet tenetur eum, consequuntur assumenda officiis quidem omnis placeat. Sequi ex fugiat reiciendis at eligendi inventore ad, odio magnam velit doloribus...</p>
+                    <a href="#" class="btn btn-primary">Читати більше</a>
                 </div>
 
                 <hr>
             </div>
+
+            <div class="col-sm-2 container-fluid">
+
+
+                <h4>Популярні статті</h4>
+                <div class="tabs1">
+
+
+
+
+                    <input class="tabs__tab" type="radio" id="tabs__tab3" name="tabstab" checked="checked"/>
+                    <label class="tabs__title" for="tabs__tab3">Тиждень</label>
+
+                    <a class="top" href="#3">Автор1</a>
+
+                    <input class="tabs__tab" type="radio" id="tabs__tab4" name="tabstab"/>
+                    <label class="tabs__title" for="tabs__tab4">Місяць</label>
+
+                    <a class="top" href="#3">Автор2</a>
+                </div>
+            </div>
+
+
         </div>
     </div>
 
@@ -97,7 +71,7 @@
         </nav>
     </div>
 
-</div>
+
 
     <footer class="blog-footer">
         <div class="col-lg-2">
@@ -106,5 +80,50 @@
         </div>
     </footer>
 
+
+    <Style>
+        input{
+            display: none;
+        }
+        .tabs1 {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 600px;
+        }
+
+        .tabs__title {
+            width: 1px;
+            flex-grow: 1;
+            order: -1;
+            color: #fff;
+            background-color: #2c2c2c;
+            cursor: pointer;
+            user-select: none;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .top {
+            display: none;
+            width: 100%;
+            flex-grow: 2;
+            margin: 0;
+            padding: 10px;
+            background-color: #ddd;
+        }
+
+        .tabs__tab:checked+.tabs__title {
+            color: #000;
+            background-color: #ddd;
+        }
+
+        .tabs__tab:checked+.tabs__title+ .top {display: flex;}
+        .tabs__title:hover {opacity: 0.9;}
+
+
+    </Style>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
